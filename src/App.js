@@ -7,6 +7,11 @@ import HomePage from './HomePage'
 import DashBoard from './Dashboard'
 
 
+class App extends Component {
+  state ={
+    user: {}
+  }
+
   componentDidMount = () => {
     if (localStorage.getItem('token')) {
       fetch('http://localhost:3001/current_user', {
@@ -53,13 +58,22 @@ import DashBoard from './Dashboard'
 
   }
 
-class App extends Component {
+  // componentDidMount(){
+  //   fetch('http://localhost:3001/users')
+  //   .then(res => res.json())
+  //   .then(json => {
+  //     this.setState({
+  //       user: json
+  //     })
+  //   })
+  // }
+
   render() {
     return (
       <div className="App">
-        <HomePage />
-        <SignUp sendSignUp={this.sendSignUp}/>
-        <LogIn />
+        <HomePage user={this.state.user}/>
+        <SignUp user={this.state.user} sendSignUp={this.sendSignUp}/>
+        <LogIn user={this.state.user}/>
       </div>
     );
   }

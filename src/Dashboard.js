@@ -2,11 +2,12 @@ import React from 'react'
 import AnxietyForm from './AnxietyForm'
 import DailyGraph from './DailyGraph'
 
-const DashBoard = () => {
+const DashBoard = (props) => {
+  
   return (
     <div>
-      <AnxietyForm />
-      <DailyGraph />
+      <AnxietyForm user={props.user}/>
+      <DailyGraph user={props.user}/>
     </div>
   )
 

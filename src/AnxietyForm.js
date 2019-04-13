@@ -9,8 +9,10 @@ class AnxietyForm extends React.Component {
     socialActivity: ''
   }
 
-dailyChangeHandler = () => {
-
+dailyChangeHandler = (e) => {
+  this.setState({
+    [e.target.name]: e.target.value
+  })
 }
 
 

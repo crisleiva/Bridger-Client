@@ -23,7 +23,7 @@ class SignUp extends React.Component {
           <input type='email' name='email' placeholder='Email' onChange={this.changeHandler} value={this.state.email} />
           <input type="submit" value="Sign Up"/>
         </form>
-        <DashBoard />
+        <DashBoard user={this.props.user}/>
       </div>
     )
   }
