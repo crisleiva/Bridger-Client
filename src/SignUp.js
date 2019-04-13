@@ -19,8 +19,8 @@ class SignUp extends React.Component {
       <div>
         <form onSubmit={(e) => this.props.sendSignUp(this.state, e)}>
           <input type="text" name="username" placeholder="Username" onChange={this.changeHandler} value={this.state.name}/>
-          <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
           <input type='email' name='email' placeholder='Email' onChange={this.changeHandler} value={this.state.email} />
+          <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
           <input type="submit" value="Sign Up"/>
         </form>
         <DashBoard />
