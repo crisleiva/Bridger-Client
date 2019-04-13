@@ -57,16 +57,15 @@ class App extends Component {
       user: {}
     })
     localStorage.removeItem('token')
-
   }
-  
+
   render() {
     return (
       <div className="App">
         <Switch>
           <Route path="/login" render={() => <LogIn user={this.state.user}/>}/>
           <Route path="/signup" render={() => <SignUp user={this.state.user} sendSignUp={this.sendSignUp}/>}/>
-          <Route path="/" component={HomePage}/>f
+          <Route path="/" component={HomePage}/>
         </Switch>
       </div>
     );
