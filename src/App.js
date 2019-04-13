@@ -60,6 +60,7 @@ class App extends Component {
 
 
   render() {
+  
     return (
       <div className="App">
         <HomePage user={this.state.user}/>
