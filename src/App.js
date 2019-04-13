@@ -4,13 +4,10 @@ import SignUp from './SignUp'
 import LogIn from './LogIn'
 import AnxietyForm from './AnxietyForm'
 import HomePage from './HomePage'
+import DashBoard from './Dashboard'
 
-class App extends Component {
 
-  state = {  
-    user:{}
-  }
-
+<<<<<<< HEAD
   componentDidMount = () => {
     if (localStorage.getItem('token')) {
       fetch('http://localhost:3001/current_user', {
@@ -56,13 +53,16 @@ class App extends Component {
     localStorage.removeItem('token')
     
   }
+=======
+
+class App extends Component {
+>>>>>>> e46e1e11fb1411f317c6dbb13aff479c57465649
   render() {
     return (
       <div className="App">
         <HomePage />
         <SignUp sendSignUp={this.sendSignUp}/>
         <LogIn />
-        <AnxietyForm />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import DashBoard from './Dashboard.js'
 
 class LogIn extends React.Component {
   state = {
@@ -20,6 +21,7 @@ class LogIn extends React.Component {
           <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
           <input type="submit" value="Log In"/>
         </form>
+        <DashBoard />
       </div>
     )
   }

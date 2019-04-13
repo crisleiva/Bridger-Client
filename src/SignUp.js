@@ -1,4 +1,5 @@
 import React from 'react'
+import DashBoard from './Dashboard'
 
 class SignUp extends React.Component {
   state = {
@@ -22,6 +23,7 @@ class SignUp extends React.Component {
           <input type='email' name='email' placeholder='Email' onChange={this.changeHandler} value={this.state.email} />
           <input type="submit" value="Sign Up"/>
         </form>
+        <DashBoard />
       </div>
     )
   }
