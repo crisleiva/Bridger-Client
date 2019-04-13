@@ -7,7 +7,6 @@ import HomePage from './HomePage'
 import DashBoard from './Dashboard'
 
 
-<<<<<<< HEAD
   componentDidMount = () => {
     if (localStorage.getItem('token')) {
       fetch('http://localhost:3001/current_user', {
@@ -51,12 +50,10 @@ import DashBoard from './Dashboard'
       user: {}
     })
     localStorage.removeItem('token')
-    
+
   }
-=======
 
 class App extends Component {
->>>>>>> e46e1e11fb1411f317c6dbb13aff479c57465649
   render() {
     return (
       <div className="App">
