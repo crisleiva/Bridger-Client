@@ -1,4 +1,6 @@
 import React, {Component} from "react"
+import {Route, Switch, Link} from 'react-router-dom'
+
 
 class HomePage extends Component{
   render(){
@@ -6,9 +8,13 @@ class HomePage extends Component{
       <div id="HomePage">
       {/* Login/Signout button div */}
         <div id="LoginSignoutButton">
-          <h3 id="Login" className="displayInline" >Login</h3>
+          <Link to="/login">
+            <h3 id="Login" className="displayInline" >Login</h3>
+          </Link>
           <h3 className="displayInline" >/</h3>
-          <h3 id="Signout"className="displayInline" >Sign Up</h3>
+          <Link to="/signup">
+            <h3 id="Signout"className="displayInline" >Sign Up</h3>
+          </Link>
         </ div>
       {/* MainPage logo div */}
         <div id="MainPageLogo">
