@@ -7,7 +7,6 @@ import HomePage from './HomePage'
 import DashBoard from './Dashboard'
 
 
-<<<<<<< HEAD
   componentDidMount = () => {
     if (localStorage.getItem('token')) {
       fetch('http://localhost:3001/current_user', {
@@ -34,7 +33,7 @@ import DashBoard from './Dashboard'
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({user: {...userObj, email: 'anythng' }  })
+      body: JSON.stringify({user: userObj })
     })
     .then(res => res.json())
     .then(userData => {
@@ -46,6 +45,25 @@ import DashBoard from './Dashboard'
     })
   }
 
+  handleLogin = (userObj, e) => {
+    e.preventDefault()
+    fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({user: userObj})
+    })
+    .then(res => res.json())
+    .then(userData => {
+      localStorage.setItem('token', userData.jwt)
+      this.setState({
+        user: userData.user
+      })
+    })
+  }
+
   handleLogOut = () => {
     this.setState({
       user: {}
@@ -53,16 +71,13 @@ import DashBoard from './Dashboard'
     localStorage.removeItem('token')
     
   }
-=======
-
-class App extends Component {
->>>>>>> e46e1e11fb1411f317c6dbb13aff479c57465649
+  
   render() {
     return (
       <div className="App">
         <HomePage />
         <SignUp sendSignUp={this.sendSignUp}/>
-        <LogIn />
+        <LogIn handleLogin={this.handleLogin}/>
       </div>
     );
   }

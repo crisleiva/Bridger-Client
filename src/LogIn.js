@@ -3,7 +3,7 @@ import DashBoard from './Dashboard.js'
 
 class LogIn extends React.Component {
   state = {
-    name: '',
+    email: '',
     password: ''
   }
 
@@ -16,8 +16,8 @@ class LogIn extends React.Component {
   render(){
     return (
       <div>
-        <form onSubmit={console.log}>
-          <input type="text" name="name" placeholder="Username" onChange={this.changeHandler} value={this.state.name}/>
+        <form onSubmit={() => this.props.handleLogin(this.state)}>
+          <input type="text" name="email" placeholder="Username" onChange={this.changeHandler} value={this.state.email}/>
           <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
           <input type="submit" value="Log In"/>
         </form>
