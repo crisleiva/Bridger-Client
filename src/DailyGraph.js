@@ -6,7 +6,11 @@ class DailyGraph extends React.Component {
     displayedChart: ""
   }
   //displayedChart correctly renders the value of the option form which will be an anxiety from anxieties
-
+  componentDidMount(){
+    this.setState({
+      anxieties: []
+    }, () => console.log(this.props, 'graph'))
+  }
 
   renderChart = (e) => {
     this.setState({

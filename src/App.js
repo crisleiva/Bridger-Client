@@ -9,12 +9,26 @@ import DashBoard from './Dashboard'
 
 
 class App extends Component {
+  state ={
+    user: {}
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:3001/users')
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        user: json
+      })
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <HomePage />
-        <SignUp />
-        <LogIn />
+        <HomePage user={this.state.user}/>
+        <SignUp user={this.state.user}/>
+        <LogIn user={this.state.user}/>
       </div>
     );
   }
