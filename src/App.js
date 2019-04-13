@@ -4,6 +4,7 @@ import SignUp from './SignUp'
 import LogIn from './LogIn'
 import AnxietyForm from './AnxietyForm'
 import HomePage from './HomePage'
+import DashBoard from './Dashboard'
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
         <HomePage />
         <SignUp />
         <LogIn />
-        <AnxietyForm />
+        <DashBoard />
       </div>
     );
   }
