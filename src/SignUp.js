@@ -3,8 +3,9 @@ import DashBoard from './Dashboard'
 
 class SignUp extends React.Component {
   state = {
-    name: '',
-    password: ''
+    username: '',
+    password: '',
+    email: ''
   }
 
   changeHandler = (e) => {
@@ -16,9 +17,10 @@ class SignUp extends React.Component {
   render(){
     return (
       <div>
-        <form onSubmit={console.log}>
-          <input type="text" name="name" placeholder="Username" onChange={this.changeHandler} value={this.state.name}/>
+        <form onSubmit={(e) => this.props.sendSignUp(this.state, e)}>
+          <input type="text" name="username" placeholder="Username" onChange={this.changeHandler} value={this.state.name}/>
           <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
+          <input type='email' name='email' placeholder='Email' onChange={this.changeHandler} value={this.state.email} />
           <input type="submit" value="Sign Up"/>
         </form>
         <DashBoard />
