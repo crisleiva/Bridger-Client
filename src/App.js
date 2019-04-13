@@ -13,10 +13,10 @@ class App extends Component {
 
   componentDidMount = () => {
     if (localStorage.getItem('token')) {
-      fetch('http://localhost:3000/current_user', {
+      fetch('http://localhost:3001/current_user', {
         headers: {
           'Content-Type': 'application/json',
-          'accept': 'application/json',
+          'Accept': 'application/json',
           'Authorization': localStorage.getItem('token')
         }
       })
@@ -29,14 +29,15 @@ class App extends Component {
     }
   }
 
-  sendSignUp = userObj => {
-    fetch('http://localhost:3000/current_user', {
+  sendSignUp = (userObj,e) => {
+    e.preventDefault()
+    fetch('http://localhost:3001/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'accepts': 'application/json'
+        'Accept': 'application/json'
       },
-      body: JSON.stringify({user: userObj})
+      body: JSON.stringify({user: {...userObj, email: 'anythng' }  })
     })
     .then(res => res.json())
     .then(userData => {
@@ -47,11 +48,19 @@ class App extends Component {
       })
     })
   }
+
+  handleLogOut = () => {
+    this.setState({
+      user: {}
+    })
+    localStorage.removeItem('token')
+    
+  }
   render() {
     return (
       <div className="App">
         <HomePage />
-        <SignUp />
+        <SignUp sendSignUp={this.sendSignUp}/>
         <LogIn />
         <AnxietyForm />
       </div>
