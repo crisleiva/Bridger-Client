@@ -21,7 +21,6 @@ class LogIn extends React.Component {
           <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
           <input type="submit" value="Log In"/>
         </form>
-        <DashBoard user={this.props.user}/>
       </div>
     )
   }

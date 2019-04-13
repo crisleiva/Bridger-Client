@@ -27,7 +27,7 @@ class App extends Component {
       .then(userJson => {
         this.setState({
           user: userJson.user
-        }, () => console.log(this.state))
+        })
       })
     }
   }
@@ -47,7 +47,8 @@ class App extends Component {
       this.setState({
         user: userData.user
       }, () => {
-        localStorage.setItem("token", userData.jwt);
+        localStorage.setItem("token", userData.jwt)
+        this.props.history.push('/dashboard')
       })
     })
   }
@@ -67,7 +68,7 @@ class App extends Component {
       localStorage.setItem('token', userData.jwt)
       this.setState({
         user: userData.user
-      })
+      }, () => this.props.history.push('/dashboard'))
     })
   }
 
@@ -81,7 +82,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <nav>
+        <li onClick={this.handleLogOut}>
+          logout
+        </li>
+      </nav>
         <Switch>
+          <Route path="/dashboard" render={() => <DashBoard user={this.state.user}/>}/>
           <Route path="/login" render={() => <LogIn user={this.state.user} handleLogin={this.handleLogin}/>}/>
           <Route path="/signup" render={() => <SignUp user={this.state.user} sendSignUp={this.sendSignUp}/>}/>
           <Route path="/" component={HomePage}/>f
