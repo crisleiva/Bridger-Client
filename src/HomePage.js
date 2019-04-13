@@ -8,7 +8,7 @@ class HomePage extends Component{
         <div id="LoginSignoutButton">
           <h3 id="Login" className="displayInline" >Login</h3>
           <h3 className="displayInline" >/</h3>
-          <h3 id="Signout"className="displayInline"  >Sign Up</h3>
+          <h3 id="Signout"className="displayInline" >Sign Up</h3>
         </ div>
       {/* MainPage logo div */}
         <div id="MainPageLogo">
