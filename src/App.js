@@ -57,7 +57,7 @@ class App extends Component {
     e.preventDefault()
     fetch('http://localhost:3000/login', {
       method: 'POST',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
@@ -79,7 +79,9 @@ class App extends Component {
     localStorage.removeItem('token')
   }
 
+
   render() {
+
     return (
       <div className="App">
       <nav>

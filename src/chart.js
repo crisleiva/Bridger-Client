@@ -1,8 +1,5 @@
 
 import React, { Component } from 'react';
-import Chart from './chart'
-
-
 
 
 class Chart extends Component {
@@ -22,4 +19,4 @@ class Chart extends Component {
   }
 }
 
-export default App;
+export default Chart;

@@ -1,4 +1,5 @@
 import React from 'react'
+import Chart from './chart'
 
 class DailyGraph extends React.Component {
   state = {
@@ -30,6 +31,7 @@ class DailyGraph extends React.Component {
           {anxieties}
         </select>
       </div> : "No anxieties listed yet"}
+      <Chart />
       </div>
     )
   }
