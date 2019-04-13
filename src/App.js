@@ -58,15 +58,6 @@ class App extends Component {
 
   }
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3001/users')
-  //   .then(res => res.json())
-  //   .then(json => {
-  //     this.setState({
-  //       user: json
-  //     })
-  //   })
-  // }
 
   render() {
     return (
