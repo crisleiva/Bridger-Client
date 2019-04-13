@@ -5,7 +5,7 @@ import LogIn from './LogIn'
 import AnxietyForm from './AnxietyForm'
 import HomePage from './HomePage'
 import DashBoard from './Dashboard'
-
+import Chart from './chart.js'
 
 
 class App extends Component {
@@ -15,6 +15,7 @@ class App extends Component {
         <HomePage />
         <SignUp />
         <LogIn />
+        <Chart />
       </div>
     );
   }
