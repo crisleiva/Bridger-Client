@@ -5,7 +5,7 @@ import LogIn from './LogIn'
 import AnxietyForm from './AnxietyForm'
 import HomePage from './HomePage'
 import DashBoard from './Dashboard'
-import {Route, Switch, Link} from 'react-router-dom'
+import {Route, Switch, Link, withRouter} from 'react-router-dom'
 
 
 
@@ -14,8 +14,8 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path="/login" component={LogIn}/>
-          <Route path="/signup" component={SignUp}/>
+          <Route path="/login" render={() => <LogIn user={this.state.user}/>}/>
+          <Route path="/signup" render={() => <SignUp user={this.state.user} sendSignUp={this.sendSignUp}/>}/>
           <Route path="/" component={HomePage}/>
         </Switch>
       </div>
@@ -23,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
