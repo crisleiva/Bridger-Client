@@ -15,11 +15,26 @@ dailyChangeHandler = (e) => {
   })
 }
 
+handleSubmit = (obj, e) => {
+  e.preventDefault()
+  fetch('http://localhost:3001/events', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      events: obj
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+  })
+}
 
   render(){
     return (
       <div>
-        <form onSubmit={console.log}>
+        <form onSubmit={(e) => this.handleSubmit(this.state, e)}>
         <h3>What was your biggest cause of anxiety today?</h3>
         <input type="text" name="anxietyType" placeholder="Anxiety" onChange={this.dailyChangeHandler} value={this.state.anxietyType}/>
         <h3>On a scale of 1-10 how bad was it today?</h3>

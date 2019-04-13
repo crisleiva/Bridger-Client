@@ -23,7 +23,6 @@ class SignUp extends React.Component {
           <input type="password" name="password" placeholder="Password" onChange={this.changeHandler} value={this.state.password}/>
           <input type="submit" value="Sign Up"/>
         </form>
-        <DashBoard user={this.props.user}/>
       </div>
     )
   }
