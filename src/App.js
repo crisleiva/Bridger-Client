@@ -83,9 +83,7 @@ class App extends Component {
     return (
       <div className="App">
       <nav>
-        <li onClick={this.handleLogOut}>
-          logout
-        </li>
+        <button onClick={this.handleLogOut}>{this.state.user ? 'Logout' : 'Login'}</button>
       </nav>
         <Switch>
           <Route path="/dashboard" render={() => <DashBoard user={this.state.user}/>}/>

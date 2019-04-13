@@ -11,9 +11,10 @@ class Chart extends Component {
       <div >
         <dl className="chart">
 
-        <dt class="date">2000</dt>
-        <dd class="bar" style={{"--start": 56}}>
-        <span class="value">45%</span>
+        <dt className="date">2000</dt>
+        <dd className="bar" style={{"--start": 56}}>
+        <span className="value">45%</span>
+
         </dd>
 
         </dl>
@@ -22,4 +23,4 @@ class Chart extends Component {
   }
 }
 
-export default App;
+export default Chart;
