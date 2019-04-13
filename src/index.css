@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.displayInline{
+  display:inline;
+  float: right;
+}
+#HomePage{
+  height: 100vh;
+  width: 100vw;
+
+}
+#LoginSignoutButton{
+  float:right;
+  width: 100vw;
+}
+
+MainPageLogo {
+  width: 100vw;
+
+}
+MainPageLogo img{
+  width: 100vw;
+
+}
