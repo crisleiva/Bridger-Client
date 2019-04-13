@@ -40,7 +40,7 @@ class App extends Component {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({user: {...userObj, email: 'anythng' }  })
+      body: JSON.stringify({user: userObj })
     })
     .then(res => res.json())
     .then(userData => {
@@ -52,19 +52,37 @@ class App extends Component {
     })
   }
 
+  handleLogin = (userObj, e) => {
+    e.preventDefault()
+    fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({user: userObj})
+    })
+    .then(res => res.json())
+    .then(userData => {
+      localStorage.setItem('token', userData.jwt)
+      this.setState({
+        user: userData.user
+      })
+    })
+  }
+
   handleLogOut = () => {
     this.setState({
       user: {}
     })
     localStorage.removeItem('token')
-
   }
   
   render() {
     return (
       <div className="App">
         <Switch>
-          <Route path="/login" render={() => <LogIn user={this.state.user}/>}/>
+          <Route path="/login" render={() => <LogIn user={this.state.user} handleLogin={this.handleLogin}/>}/>
           <Route path="/signup" render={() => <SignUp user={this.state.user} sendSignUp={this.sendSignUp}/>}/>
           <Route path="/" component={HomePage}/>f
         </Switch>
