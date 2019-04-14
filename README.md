@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Restless Recorder
 
-## Available Scripts
+Restless Recorder is an app for recording your anxiety levels.
 
-In the project directory, you can run:
+**There is a lack of diagnostic tools for people to be aware of their anxiety levels and patterns. We feel that there are a lot of young adults in their 20s and 30s who want to take control of their anxiety and would like some better tools. This app is designed to help fill that gap and assist people who are looking to take action to gain better awareness and potential control of their anxiety.**
 
-### `npm start`
+While not a total solution to anxiety in itself, with the data from the app, the user and/or user's physician can view the data for help with diagnosis. Specifically, the user can become more self-aware about what make them anxious and when they are likely to become anxious.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### How it works
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Users sign into Restless Recorder. From here once their account is made they are encouraged to make daily logs about their anxiety. The form they fill out is simple and easy to use to encourage them to keep using it. First and foremost, they write down their biggest cause of anxiety for that day, followed by a numerical value (1-10) to help describe the intensity of that anxiety. From day to day they will be able to select this cause of anxiety again and keep assigning it new values. These values are tracked over time so they can make note of these changes. The user may also add a new cause of anxiety if there is a larger cause of anxiety for that day. The values of that cause will also be tracked from that point forward.
 
-### `npm test`
+In order to account for external factors, the user also inputs values for their satisfaction of their previous night's sleep, their diet for that day as well as their amount of social activity. This is so they may look over that data and cross-analyze it with their anxiety patterns.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Developement
 
-### `npm run build`
+Restless Recorder is built with React and a Rails API backend.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### App Designers
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+*Restless Recorder was designed by Michael Romero, Christian Leiva, Seann Branchfield, and Elliot Chen at Flatiron School's Access Lab's Hackathon.*
+Message Input
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Message #dvrgnce
